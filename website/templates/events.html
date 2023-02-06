@@ -1,0 +1,31 @@
+{% extends "base.html" %}{% block title %}{% endblock %} {% block content %}
+
+<h1 align="center">Pojistné události</h1>
+
+<!-- Insurance event list -->
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">
+    {{ note.data }}
+
+    
+    <!-- Button to delete insurance event from Bootstrap -->
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+
+<!-- Insurance event text field -->
+<form method="POST">
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div align="center">
+    <!-- Submit button to add insurance event -->
+    <button type="submit" class="btn btn-secondary">
+      Přidat pojistnou událost
+    </button>
+  </div>
+</form>
+{% endblock %}

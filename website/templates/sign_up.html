@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block title %}Registrace{% endblock %} {% block
+content %}
+
+<!-- Sign Up form -->
+<form method="POST">
+  <h3 align="center">Registrace</h3>
+
+  <!-- Sign Up form - Email address -->
+  <div class="form-group">
+    <label for="email">Emailová adresa</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Zadejte email"
+    />
+  </div>
+
+  <!-- Sign Up form - First name -->
+  <div class="form-group">
+    <label for="firstName">Křesní jméno</label>
+    <input
+      type="text"
+      class="form-control"
+      id="firstName"
+      name="firstName"
+      placeholder="Zadejte křesní jméno"
+    />
+  </div>
+
+  <!-- Sign Up form - Password -->
+  <div class="form-group">
+    <label for="password1">Heslo</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password1"
+      name="password1"
+      placeholder="Zadejte heslo"
+    />
+  </div>
+
+  <!-- Sign Up form - Password Confirmation -->
+  <div class="form-group">
+    <label for="password2">Heslo (Potvrzení)</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password2"
+      name="password2"
+      placeholder="Potvrďte heslo"
+    />
+  </div>
+
+  <br />
+
+  <!-- Submit button from Bootstrap to submit form -->
+  <button type="submit" class="btn btn-secondary">Zaregistrovat</button>
+</form>
+{% endblock %}

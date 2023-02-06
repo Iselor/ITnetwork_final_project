@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block title %}Přihlášení{% endblock %} {% block
+content %}
+<!-- Login form -->
+<form method="POST">
+  <h3 align="center">Přihlášení</h3>
+
+  <!-- Login form - email address -->
+  <div class="form-group">
+    <label for="email">Emailová adresa</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Zadejte email"
+    />
+  </div>
+
+  <!-- Login form - password -->
+  <div class="form-group">
+    <label for="password">Heslo</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      name="password"
+      placeholder="Zadejte heslo"
+    />
+  </div>
+  <br />
+
+  <!-- Bootstrap submit button to submit login-->
+  <button type="submit" class="btn btn-secondary">Přihlásit</button>
+</form>
+{% endblock %}
